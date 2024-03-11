@@ -28,7 +28,7 @@ class FirstScreenViewController: UIViewController, Observer {
     }
 
     private func setupUI() {
-        view.backgroundColor = .green
+        view.backgroundColor = .gray
 
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(valueLabel)

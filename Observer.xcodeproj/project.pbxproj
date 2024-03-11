@@ -19,7 +19,6 @@
 		D2EB6D3C2B9F7070000444CF /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB6D3B2B9F7070000444CF /* SecondScreenViewController.swift */; };
 		D2EB6D402B9F70CF000444CF /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB6D3F2B9F70CF000444CF /* Observer.swift */; };
 		D2EB6D422B9F7126000444CF /* FirstScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB6D412B9F7126000444CF /* FirstScreenViewModel.swift */; };
-		D2EB6D442B9F7174000444CF /* SecondScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EB6D432B9F7174000444CF /* SecondScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		D2EB6D3B2B9F7070000444CF /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 		D2EB6D3F2B9F70CF000444CF /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		D2EB6D412B9F7126000444CF /* FirstScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewModel.swift; sourceTree = "<group>"; };
-		D2EB6D432B9F7174000444CF /* SecondScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				D2EB6D412B9F7126000444CF /* FirstScreenViewModel.swift */,
-				D2EB6D432B9F7174000444CF /* SecondScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -299,7 +296,6 @@
 				D2EB6D3C2B9F7070000444CF /* SecondScreenViewController.swift in Sources */,
 				D2EB6D3A2B9F7007000444CF /* FirstScreenViewController.swift in Sources */,
 				D2EB6D092B9F6D8B000444CF /* AppDelegate.swift in Sources */,
-				D2EB6D442B9F7174000444CF /* SecondScreenViewModel.swift in Sources */,
 				D2EB6D0B2B9F6D8B000444CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
