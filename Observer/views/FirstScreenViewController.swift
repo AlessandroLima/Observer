@@ -15,7 +15,7 @@ class FirstScreenViewController: UIViewController, Observer {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.observer = self
-        self.valueLabel.text = "Palceholder"
+        self.valueLabel.text = "Valor Inicial"
     }
 
     required init?(coder: NSCoder) {
@@ -28,7 +28,7 @@ class FirstScreenViewController: UIViewController, Observer {
     }
 
     private func setupUI() {
-        view.backgroundColor = .gray
+        view.backgroundColor = .white
 
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(valueLabel)
