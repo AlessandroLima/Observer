@@ -5,7 +5,6 @@
 //  Created by Alessandro Teixeira Lima on 11/03/24.
 //
 
-import Foundation
 import UIKit
 
 class FirstScreenViewController: UIViewController, Observer {
@@ -16,6 +15,7 @@ class FirstScreenViewController: UIViewController, Observer {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         self.viewModel.observer = self
+        self.valueLabel.text = "Palceholder"
     }
 
     required init?(coder: NSCoder) {
@@ -28,19 +28,31 @@ class FirstScreenViewController: UIViewController, Observer {
     }
 
     private func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .green
 
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(valueLabel)
 
+        let showSecondScreenButton = UIButton(type: .system)
+        showSecondScreenButton.setTitle("Mostrar Segunda Tela", for: .normal)
+        showSecondScreenButton.addTarget(self, action: #selector(showSecondScreen), for: .touchUpInside)
+        showSecondScreenButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(showSecondScreenButton)
+
         NSLayoutConstraint.activate([
             valueLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            valueLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            valueLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            showSecondScreenButton.topAnchor.constraint(equalTo: valueLabel.bottomAnchor, constant: 20),
+            showSecondScreenButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+
+    @objc private func showSecondScreen() {
+        let secondScreenViewController = SecondScreenViewController(viewModel: viewModel)
+        navigationController?.pushViewController(secondScreenViewController, animated: true)
     }
 
     func valueDidChange(newValue: String) {
         valueLabel.text = newValue
     }
 }
-
